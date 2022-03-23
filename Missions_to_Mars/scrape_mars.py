@@ -68,4 +68,4 @@ def scrape():
 
     browser.quit()
 
-    return hemisphere_image_urls, featured_image_url, news_title, news_desc
+    return {'hemisphere_image_urls': hemisphere_image_urls, 'featured_image': featured_image_url, 'news_title': news_title, 'news_desc': news_desc}
