@@ -11,7 +11,6 @@ mongo = PyMongo(app)
 def index():
     mars = mongo.db.mars.find_one()
     return render_template('index.html', mars=mars)
-    # Find one record of data from the mongo database
 
 @app.route("/scrape")
 def scrape():

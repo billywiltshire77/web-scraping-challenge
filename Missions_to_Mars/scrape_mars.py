@@ -57,7 +57,7 @@ def scrape():
         soup = bs(html, 'html.parser')
         
         image = soup.find('img', class_='wide-image')['src']
-        hemisphere = click_links[x][:-9]
+        hemisphere = click_links[x]
         
         hemisphere_dict = {}
         hemisphere_dict['title'] = hemisphere
@@ -68,4 +68,6 @@ def scrape():
 
     browser.quit()
 
-    return {'hemisphere_image_urls': hemisphere_image_urls, 'featured_image': featured_image_url, 'news_title': news_title, 'news_desc': news_desc}
+    mars_info = {'hemisphere_image_urls': hemisphere_image_urls, 'featured_image': featured_image_url, 'news_title': news_title, 'news_desc': news_desc}
+
+    return mars_info
